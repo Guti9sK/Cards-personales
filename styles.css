@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(160, 176, 221);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.img{
+    width: 100%;
+    height: 100%;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contenido{
+    position: absolute;
+    bottom: -160px;
+    width: 100%;
+    height:160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(15px);
+    transition: all .5s;
+}
+.card:hover .contenido{
+    bottom: 0;
+}
+.contenido .text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.text h3, .text span{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all .5s;
+}
+.text span{
+    font-size: 12px;
+}
+.card.card:hover .text h3,
+.card.card:hover .text span{
+    opacity: 1;
+}
+
+.redes{
+    width: 80%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.redes a{
+    font-size: 20px;
+    color: #fff;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: all .5s;
+}
+.card:hover .redes a{
+    transform: translateY(10px);
+    opacity: 1;
+}
+.redes a:nth-child(1){
+    transition-delay: .2s;
+}
+.redes a:nth-child(2){
+    transition-delay: .4s;
+}
+.redes a:nth-child(3){
+    transition-delay: .6s;
+}
+
+
+
+
+
+
+
+
+
